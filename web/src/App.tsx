@@ -112,9 +112,9 @@ export function App() {
 
       <section className="card" aria-labelledby="scen">
         <h2 id="scen">Сценарии</h2>
-        <div className="scenarios" role="list">
+        <div className="scenarios">
           {SCENARIOS.map((s) => (
-            <button key={s.id} type="button" role="listitem" className={s.id === scenarioId ? 'chip active' : 'chip'} onClick={() => pick(s)}>
+            <button key={s.id} type="button" aria-pressed={s.id === scenarioId} className={s.id === scenarioId ? 'chip active' : 'chip'} onClick={() => pick(s)}>
               {s.title}
             </button>
           ))}
