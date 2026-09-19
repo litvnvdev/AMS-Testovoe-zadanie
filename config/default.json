@@ -1,0 +1,14 @@
+{
+  "port": 3000,
+  "dbPath": "data/ams.db",
+  "webDir": "web/dist",
+  "planner": "mock",
+  "limits": {
+    "defaults": { "max_steps": 8, "max_tool_calls": 5, "max_runtime_seconds": 120 },
+    "caps": { "max_steps": 20, "max_tool_calls": 10, "max_runtime_seconds": 300 }
+  },
+  "policy": {
+    "automatedAllowlist": ["create_followup"],
+    "automatedMaxWrites": 1
+  }
+}
